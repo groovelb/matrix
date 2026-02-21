@@ -1,0 +1,10 @@
+.fade-in-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}

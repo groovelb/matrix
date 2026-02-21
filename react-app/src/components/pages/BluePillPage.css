@@ -1,0 +1,22 @@
+.blue-pill-page {
+  padding-top: 5rem;
+}
+
+.blue-pill-page__header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+
+.blue-pill-page__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-blue-pill);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.blue-pill-page__subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}

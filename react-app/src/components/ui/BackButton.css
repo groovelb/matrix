@@ -1,0 +1,43 @@
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-matrix-green);
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid var(--color-matrix-green-dim);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.05em;
+}
+
+.back-button:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 15px var(--color-matrix-green-glow);
+}
+
+.back-button__arrow {
+  font-weight: 700;
+}
+
+.back-button__text {
+  position: relative;
+}
+
+.back-button:hover .back-button__text {
+  animation: back-glitch 0.3s ease;
+}
+
+@keyframes back-glitch {
+  0%, 100% { transform: translate(0); }
+  25% { transform: translate(-2px, 1px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+}

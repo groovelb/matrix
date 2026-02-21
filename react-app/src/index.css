@@ -1,0 +1,105 @@
+:root {
+  /* Colors */
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #111111;
+  --color-bg-card: #0d1117;
+  --color-matrix-green: #00FF41;
+  --color-matrix-green-dim: #00cc33;
+  --color-matrix-green-glow: rgba(0, 255, 65, 0.3);
+  --color-red-pill: #FF0040;
+  --color-red-pill-glow: rgba(255, 0, 64, 0.3);
+  --color-blue-pill: #0080FF;
+  --color-blue-pill-glow: rgba(0, 128, 255, 0.3);
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #888888;
+  --color-text-dim: #555555;
+
+  /* Typography */
+  --font-mono: 'Fira Code', 'Source Code Pro', 'Courier New', monospace;
+  --font-display: 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-padding: 6rem 2rem;
+  --card-padding: 2rem;
+  --container-max-width: 1100px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 600ms ease-out;
+
+  /* Z-index layers */
+  --z-rain: 0;
+  --z-content: 1;
+  --z-overlay: 10;
+  --z-modal: 20;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-matrix-green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-matrix-green-dim);
+}
+
+button {
+  font-family: var(--font-mono);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--color-matrix-green);
+  color: var(--color-bg);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-matrix-green-dim);
+  border-radius: 3px;
+}

@@ -1,0 +1,34 @@
+.quote-block {
+  min-width: 350px;
+  max-width: 450px;
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-text-dim);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.quote-block__text {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.quote-block__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-block__character {
+  font-size: 0.8rem;
+  color: var(--color-matrix-green);
+  font-weight: 500;
+}
+
+.quote-block__film {
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+}

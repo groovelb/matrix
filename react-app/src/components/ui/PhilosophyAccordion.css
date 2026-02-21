@@ -1,0 +1,107 @@
+.philosophy-accordion {
+  border: 1px solid var(--color-text-dim);
+  border-radius: 8px;
+  background: var(--color-bg-card);
+  overflow: hidden;
+  transition: border-color var(--transition-normal);
+}
+
+.philosophy-accordion--open {
+  border-color: var(--color-matrix-green-dim);
+}
+
+.philosophy-accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.philosophy-accordion__header-text {
+  flex: 1;
+}
+
+.philosophy-accordion__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.philosophy-accordion--open .philosophy-accordion__title {
+  color: var(--color-matrix-green);
+}
+
+.philosophy-accordion__subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  font-style: italic;
+}
+
+.philosophy-accordion__icon {
+  font-size: 1.5rem;
+  color: var(--color-matrix-green);
+  font-weight: 300;
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.philosophy-accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.philosophy-accordion--open .philosophy-accordion__body {
+  max-height: 600px;
+}
+
+.philosophy-accordion__content {
+  padding: 0 2rem 2rem;
+  border-top: 1px solid rgba(85, 85, 85, 0.3);
+  padding-top: 1.5rem;
+}
+
+.philosophy-accordion__description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-accordion__meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.philosophy-accordion__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.philosophy-accordion__meta-label {
+  font-size: 0.65rem;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.philosophy-accordion__meta-value {
+  font-size: 0.85rem;
+  color: var(--color-matrix-green-dim);
+}
+
+.philosophy-accordion__connection {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-matrix-green);
+}

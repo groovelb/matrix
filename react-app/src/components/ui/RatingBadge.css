@@ -1,0 +1,78 @@
+.rating-badge {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-text-dim);
+  border-radius: 8px;
+  padding: var(--card-padding);
+}
+
+.rating-badge__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.rating-badge__year {
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.rating-badge__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.rating-badge__bar-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rating-badge__bar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-badge__label {
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rating-badge__value {
+  font-size: 0.8rem;
+  color: var(--color-matrix-green);
+  font-weight: 600;
+}
+
+.rating-badge__bar {
+  width: 100%;
+  height: 6px;
+  background: var(--color-bg-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rating-badge__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+.rating-badge__bar-fill--imdb {
+  background: linear-gradient(90deg, var(--color-matrix-green-dim), var(--color-matrix-green));
+}
+
+.rating-badge__bar-fill--rt {
+  background: linear-gradient(90deg, #ff6347, #ff4500);
+}
+
+.rating-badge__box-office {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}

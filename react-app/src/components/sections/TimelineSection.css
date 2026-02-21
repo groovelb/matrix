@@ -1,0 +1,20 @@
+.timeline-section__track {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.timeline-section__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--color-matrix-green-dim), var(--color-matrix-green), var(--color-matrix-green-dim), transparent);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .timeline-section__line {
+    left: 20px;
+  }
+}

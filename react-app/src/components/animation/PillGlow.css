@@ -1,0 +1,33 @@
+.pill-glow {
+  position: relative;
+  display: inline-flex;
+  border-radius: 50%;
+}
+
+.pill-glow::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: pill-pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.pill-glow--red::before {
+  background: radial-gradient(circle, var(--color-red-pill-glow), transparent 70%);
+}
+
+.pill-glow--blue::before {
+  background: radial-gradient(circle, var(--color-blue-pill-glow), transparent 70%);
+}
+
+.pill-glow:hover::before {
+  opacity: 0.7;
+  animation-duration: 1s;
+}
+
+@keyframes pill-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.15); opacity: 0.6; }
+}

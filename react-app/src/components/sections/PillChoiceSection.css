@@ -1,0 +1,30 @@
+.pill-choice-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 3rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pill-choice-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pill-choice-section__intro {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 600px;
+}
+
+.pill-choice-section__buttons {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}

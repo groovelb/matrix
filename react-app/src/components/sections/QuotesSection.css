@@ -1,0 +1,26 @@
+.quotes-section {
+  overflow: hidden;
+}
+
+.quotes-section__marquee {
+  overflow: hidden;
+  margin-top: 2rem;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.quotes-section__track {
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee-scroll 60s linear infinite;
+  width: max-content;
+}
+
+.quotes-section__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

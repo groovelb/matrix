@@ -1,0 +1,9 @@
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-shell__content {
+  position: relative;
+  z-index: var(--z-content);
+}

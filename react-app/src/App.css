@@ -1,0 +1,28 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app__flash {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  opacity: 0.3;
+  animation: flash-fade 0.6s ease-out forwards;
+}
+
+@keyframes flash-fade {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0; }
+}
+
+.app__content {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.app__content--fading {
+  opacity: 0;
+}
