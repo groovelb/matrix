@@ -21,11 +21,21 @@ export default function MatrixTitle({ text, active = true }) {
 
     const charSize = 14;
 
+    const PADDING = 60;
+
     function resize() {
       const dpr = window.devicePixelRatio || 1;
       const container = canvas.parentElement;
-      const w = container.offsetWidth;
-      const h = container.offsetHeight;
+      const containerW = container.offsetWidth;
+
+      // measure text to determine canvas size
+      const fontSize = Math.min(containerW * 0.18, 180);
+      ctx.font = `900 ${fontSize}px 'Black Ops One', 'Fira Code', monospace`;
+      const textMetrics = ctx.measureText(text);
+      const textW = textMetrics.width;
+
+      const w = textW + PADDING * 2;
+      const h = fontSize + PADDING * 2;
 
       canvas.width = rainCanvas.width = w * dpr;
       canvas.height = rainCanvas.height = h * dpr;
@@ -39,11 +49,11 @@ export default function MatrixTitle({ text, active = true }) {
       dropsRef.current = Array.from({ length: columns }, () =>
         Math.floor(Math.random() * (h / charSize)),
       );
-      sizeRef.current = { w, h, dpr };
+      sizeRef.current = { w, h, dpr, fontSize };
     }
 
     function frame() {
-      const { w, h } = sizeRef.current;
+      const { w, h, fontSize } = sizeRef.current;
       if (!w || !h) return;
 
       /* ---- rain layer ---- */
@@ -68,8 +78,7 @@ export default function MatrixTitle({ text, active = true }) {
       /* ---- composite: text‑masked rain ---- */
       ctx.clearRect(0, 0, w, h);
 
-      const fontSize = Math.min(w * 0.14, 120);
-      ctx.font = `900 ${fontSize}px 'Fira Code', monospace`;
+      ctx.font = `900 ${fontSize}px 'Black Ops One', 'Fira Code', monospace`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
 
@@ -87,7 +96,6 @@ export default function MatrixTitle({ text, active = true }) {
       ctx.shadowBlur = 30;
       ctx.strokeStyle = 'rgba(0, 255, 65, 0.2)';
       ctx.lineWidth = 1;
-      ctx.font = `900 ${fontSize}px 'Fira Code', monospace`;
       ctx.strokeText(text, w / 2, h / 2);
       ctx.shadowBlur = 0;
 
