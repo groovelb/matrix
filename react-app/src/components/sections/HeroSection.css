@@ -21,6 +21,7 @@
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  filter: drop-shadow(0 0 20px var(--color-matrix-green-glow));
 }
 
 .hero-section__title--visible {
