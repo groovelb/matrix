@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import GlitchText from '../animation/GlitchText';
+import MatrixTitle from '../animation/MatrixTitle';
 import TypewriterText from '../animation/TypewriterText';
 import TerminalPrompt from '../ui/TerminalPrompt';
 import { HERO } from '../../data/hero';
@@ -23,7 +23,7 @@ export default function HeroSection({ onTypingComplete }) {
         />
       </div>
       <div className={`hero-section__title ${showTitle ? 'hero-section__title--visible' : ''}`}>
-        <GlitchText text={HERO.title} />
+        <MatrixTitle text={HERO.title} active={showTitle} />
       </div>
       <div
         className={`hero-section__subtitle ${showTitle ? 'hero-section__subtitle--visible' : ''}`}
